@@ -1,0 +1,29 @@
+GET http://localhost:3000/members
+
+###
+GET http://localhost:3000/members/682a474f9d7fa815377974cb
+
+
+###
+POST  http://localhost:3000/members
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@gail.com",
+  "phone": "1234567890"
+}
+
+
+###
+
+DELETE http://localhost:3000/members/682a3b7588ca142744af41a6
+
+
+###
+PATCH  http://localhost:3000/members/682a474f9d7fa815377974cb
+Content-Type: application/json
+
+{
+  "name": "John D"
+}
