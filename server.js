@@ -19,7 +19,10 @@ mongoose.connect(process.env.DATABASE_URL, {
 app.use(express.json()) // Middleware to parse JSON request bodies
 
 // Importing the routes
-const userInfoRoutes = require('./routes/userInfo') // Importing user routes
+const userInfoRoutes = require('./routes/userInfo') 
+// Importing user routes
+app.use('/userInfo', userInfoRoutes) // Mounting the user routes on the /user path
+
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000')
