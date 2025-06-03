@@ -32,9 +32,10 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ message: 'Email already exists' });
     }
     const member = new Member({
-      name: req.body.name,
+    firstname: req.body.  firstname,
+      lastname: req.body.lastname,
       email: req.body.email,
-      phone: req.body.phone,
+     password: req.body.password,
       date: req.body.date
     });
     const newMember = await member.save();
@@ -45,14 +46,18 @@ router.post('/', async (req, res) => {
 });
 //creating routes for updating a member
 router.patch('/:id', getMember, async (req, res) => {
-  if (req.body.name != null) {
-    res.member.name = req.body.name;
+  if (req.body.firstname != null) {
+    res.member.firstname = req.body.firstname;
+  }
+  if (req.body.lastname != null) {
+    res.member.lastname = req.body.lastname;
+
   }
   if (req.body.email != null) {
     res.member.email = req.body.email;
   }
-  if (req.body.phone != null) {
-    res.member.phone = req.body.phone;
+  if (req.body.password != null) {
+    res.member.password = req.body.password;
   }
   try {
     const updatedMember = await res.member.save();

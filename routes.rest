@@ -9,15 +9,15 @@ POST  http://localhost:3000/members
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "john@gail.com",
-  "phone": "1234567890"
+  "firstname":"Delaney",
+  "lastname": "leke",
+  "email":"uelaneyzingwa@gmial.com",
+  "password":"31425698"
 }
-
 
 ###
 
-DELETE http://localhost:3000/members/682a3b7588ca142744af41a6
+DELETE http://localhost:3000/members/683eee0c1906e984423287e1
 
 
 ###
